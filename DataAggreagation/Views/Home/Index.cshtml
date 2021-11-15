@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    List<ItemTotal> items =   ViewBag.testData;
+    }
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>
+        @ViewBag.time1
+    </div>
+    <div>
+        @ViewBag.time2
+    </div>
+
+    @foreach (var item in items)
+    {
+        <div style="display:flex">
+            <div style="flex:1">@item.id</div>
+            <div style="flex:1">@item.first_name</div>
+            <div style="flex:1">@item.last_name</div>
+            <div style="flex:1">@item.email</div>
+            <div style="flex:1">@item.gender</div>
+            <div style="flex:1">@item.ip_address</div>
+        </div>
+    }
+</div>
+  
